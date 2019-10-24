@@ -10,11 +10,11 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
   getAssignedStore():Observable<any>{
-    return this.http.get("../assets/data/assignedStore.json");
+    return this.http.get("https://jefe10jav.github.io/technical_test_Getin/assets/data/assignedStore.json");
   }
 
   
   getBrandDateData():Observable<any>{
-    return this.http.get("../assets/data/brandDateData.json");
+    return this.http.get("https://jefe10jav.github.io/technical_test_Getin/assets/data/brandDateData.json");
   }
 }
