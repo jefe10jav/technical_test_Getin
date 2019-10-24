@@ -1,0 +1,75 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm">
+
+      <div id="check">
+        <input type="checkbox" (click)="mergeInfoFromResponse(assignedStoreData,brandDateData,average)">Mostrar
+        promedios<br>
+      </div>
+
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Tienda</th>
+            <th scope="col" *ngIf="totals.totalPeasants!=0.00">Paseantes</th>
+            <th scope="col" *ngIf="totals.totalVisitors!=0.00">Visitas</th>
+            <th scope="col" *ngIf="totals.totalAttraction!=0.00">Atracción</th>
+            <th scope="col" *ngIf="totals.totalCabinets!=0.00">Cabinet</th>
+            <th scope="col" *ngIf="totals.totalTickets!=0.00">Tickets</th>
+            <th scope="col" *ngIf="totals.totalPersuasion!=0.00">Conversión de compra</th>
+            <th scope="col" *ngIf="totals.totalRevenue!=0.00">Ingresos</th>
+            <th scope="col" *ngIf="totals.totalAverageTicket!=0.00">Ticket promedio</th>
+            <th scope="col" *ngIf="totals.totalItems!=0.00">Artículos</th>
+            <th scope="col" *ngIf="totals.totalItemperTicket!=0.00">Artículos por ticket</th>
+            <th scope="col" *ngIf="totals.totalAveragePermanence!=0.00">Permanencia promedio</th>
+            <th scope="col" *ngIf="totals.totalDayOff!=0.00">Días apagados</th>
+          </tr>
+        </thead>
+
+        <tr *ngFor="let store of stores;">
+          <td>
+            {{store.name}}
+          </td>
+          <td *ngIf="totals.totalPeasants!=0.00">
+            {{store.peasants}}
+          </td>
+          <td *ngIf="totals.totalVisitors!=0.00">
+            {{store.visitors}}
+          </td>
+          <td *ngIf="totals.totalAttraction!=0.00">
+            {{store.attraction}}%
+          </td>
+          <td *ngIf="totals.totalCabinets!=0.00">
+            {{store.cabinets}}
+          </td>
+          <td *ngIf="totals.totalTickets!=0.00">
+            {{store.tickets}}
+          </td>
+          <td *ngIf="totals.totalPersuasion!=0.00">
+            {{store.persuasion}}%
+          </td>
+          <td *ngIf="totals.totalRevenue!=0.00">
+            {{store.revenue}}
+          </td>
+          <td *ngIf="totals.totalAverageTicket!=0.00">
+            {{store.averageTicket}}
+          </td>
+          <td *ngIf="totals.totalItems!=0.00">
+            {{store.items}}
+          </td>
+          <td *ngIf="totals.totalItemperTicket!=0.00">
+            {{store.itemperTicket}}
+          </td>
+          <td *ngIf="totals.totalAveragePermanence!=0.00">
+            {{store.averagePermanence}} min
+          </td>
+          <td *ngIf="totals.totalDayOff!=0.00">
+            {{store.dayOff}} días
+          </td>
+        </tr>
+
+      </table>
+
+    </div>
+  </div>
+</div>

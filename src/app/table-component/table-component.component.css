@@ -1,0 +1,16 @@
+#check{
+    margin-top: 50px;
+    text-align: right;
+}
+
+th{
+    color: #ffffff;
+    background-color: #2CAE79;
+    font-weight: 300;
+    text-align: center;
+}
+
+td{
+    color: #ffffff;
+    background-color: #424242;
+}
